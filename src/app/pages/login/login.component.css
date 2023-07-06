@@ -1,0 +1,19 @@
+.div-centrado{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.form-d{
+    padding: 10px;
+    background-color: bisque;
+}
+.inputs{
+    margin-top: 10px;
+}
+
+.boton{
+    margin-top: 10px;
+}

@@ -1,0 +1,28 @@
+<div class="card text-center cardContainer">
+    <!-- <div class="card-header">
+      CHAT
+    </div> -->
+    <div class="card-body" style="background-color: antiquewhite;  max-height:90%;">
+        <div id="contMsj" class="contenedorMensajes" style="max-height: 100%; z-index: 1;" >
+            <div style="margin-bottom: 10px;" id="pMensaje" *ngFor="let mensaje of mensajes"  class="ultimoMensaje"
+            [ngClass]="(this.userActual.email==mensaje.correo)? 'enviado2' : 'recibido2'">
+                <span class="chat-usuario">
+                    {{mensaje.correo}}
+                </span>
+                {{mensaje.mensaje}}
+                <span class="chat-date">
+                    {{mensaje.fechaOrden | fecha}} 
+                </span>
+            </div>
+            <!-- {{mensaje.correo}} -->
+        </div>
+    </div>
+    <form class="card-footer text-muted input-group" (ngSubmit)="enviarMensaje()" style="background-color: brown; max-height: 20%;">
+        <input type="text" class="form-control" placeholder="Mensaje" name="txtMensaje" [(ngModel)]="nuevoMensaje" maxlength="30">
+        <div class="input-group-append" (click)="enviarMensaje()">
+            <span class="input-group-text" id="basic-addon2">
+            <img class="aniEnviar" src="../../../assets/enviar.png" width="25px" alt="">
+            </span>
+        </div>
+    </form>
+  </div>

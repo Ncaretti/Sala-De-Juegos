@@ -1,0 +1,18 @@
+<div style="display: flex; justify-content: center; margin-top: 1%;">
+    <div class="estilo-jug1">
+        JUGADOR 1: {{player1Score}}
+    </div>
+    <div class="estilo-jug2" style="margin-left: 15px;">
+        JUGADOR 2: {{player2Score}}
+    </div>
+</div>
+<div style="display: flex; justify-content: center; margin-top: 1.5%;" >
+    <div style=" width: 812px; height: 412px;"class="contenedor-juego">
+        <canvas #pongCanvas width="800" height="400" style="background-color: black;"></canvas>
+    </div>
+</div>
+
+<div style="display: flex; justify-content: center; margin-top: 1%;">
+    <button (click)="startGame()" class="btn estilo-boton" [disabled]="isGameRunning">Iniciar</button>
+    <button (click)="stopGame()" style="margin-left: 15px;" class="btn estilo-boton" [disabled]="!isGameRunning">Pausar</button>
+</div>

@@ -1,0 +1,48 @@
+<div *ngIf="ganaste == 0">
+    <div class="contenedor-intentos row">
+        <div class="col text-center texto-neon">
+            <h1 style="font-weight: bold; font-family: tahoma;">Errores: {{intentos}}/6</h1>
+        </div>
+    </div>
+
+    <div class="contenedor row">
+        <div class="col text-center">
+            <h1 class="palabra">{{palabraOculta.toUpperCase()}}</h1>
+            <!-- <h1 class="palabra">{{palabraAleatoria.toUpperCase()}}</h1> -->
+        </div>
+    </div>
+
+
+    <div class="for-letras row">
+        <div class="col text-center container-letras">
+            <button name="{{letra}}" id="{{letra}}" (click)="comprobarLetra(letra, i)" class="btn btn-primary letras" *ngFor="let letra of letras; let i = index">{{letra.toUpperCase()}}</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="ganaste == 1" class="row" style="max-width: 100%;">
+    <div class="fuegos-artificiales col text-center">
+        <img class="" src="../../../assets/xw.gif">
+    </div>
+    <div class="text-center" style="margin-top: 3%;">
+        <h1 style="font-size: 4rem; color: white">
+            ⭐⭐⭐ ¡¡GANASTE!! ⭐⭐⭐
+        </h1>
+        <button (click)="volverAJugar()" class="btn btn-warning" style="margin-top: 4%; margin-right: 3%;">Volver a jugar</button>
+        <button routerLink="/home" class="btn btn-warning" style="margin-top: 4%;">Volver al menu</button>
+    </div>
+</div>
+
+<div *ngIf="ganaste == -1" class="row" style="max-width: 100%;">
+    <div class="fuegos-artificiales col text-center">
+        <img class="" src="../../../assets/XSNt.gif" width="350px">
+    </div>
+    <div class="text-center" style="margin-top: 3%;">
+        <h1 style="font-size: 4rem; color: white">
+            👎 PERDISTE 👎
+        </h1>
+        <h1 style="color: white">La palabra era: {{palabraAleatoria}}</h1>
+        <button (click)="volverAJugar()" class="btn btn-warning" style="margin-top: 4%; margin-right: 3%;">Volver a jugar</button>
+        <button routerLink="/home" class="btn btn-warning" style="margin-top: 4%;">Volver al menu</button>
+    </div>
+</div>

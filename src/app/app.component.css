@@ -1,0 +1,6 @@
+.fondo{
+    background-image: url('../assets/arcade.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

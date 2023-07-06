@@ -1,0 +1,17 @@
+.texto-neon{
+    color: #f82d97;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: tahoma;
+    letter-spacing:5px;
+    filter: drop-shadow(0 0 15px #f82d97) drop-shadow(0 0 50px #f82d97) contrast(1) brightness(1.2);
+    transition: .5s;
+}
+
+.fondo{
+    background-image: url('../../../assets/arcade.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}

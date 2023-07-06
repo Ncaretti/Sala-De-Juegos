@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tp-laboiv-74b34": {
+      "hosting": {
+        "SalaDeJuegos": [
+          "tp-laboiv-74b34"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tp-laboiv-74b34"
+  }
+}

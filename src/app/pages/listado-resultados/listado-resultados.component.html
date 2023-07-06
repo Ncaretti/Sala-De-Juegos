@@ -1,0 +1,56 @@
+<div class="fondo" >
+    <div style="margin-top: 3%; margin-left: 10%; margin-right: 10%;">
+    <p class="texto-neon" style="text-align: center;">TOP 5 - AHORCADO</p>
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+              <th scope="col">Fecha</th>
+              <th scope="col">Errores</th>
+              <th scope="col">Victoria</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ahorcado of arrayAhorcado">
+              <td>{{ahorcado.fecha}}</td>
+              <td>{{ahorcado.errores}}</td>
+              <td>{{ahorcado.victoria}}</td>
+            </tr>
+          </tbody>
+    </table>
+
+    <p class="texto-neon" style="text-align: center; margin-top: 3%;">TOP 5 - MAYOR O MENOR</p>
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+              <th scope="col">Fecha</th>
+              <th scope="col">Puntos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let mayorMenor of arrayMayorMenor">
+              <td>{{mayorMenor.fecha}}</td>
+              <td>{{mayorMenor.puntos}}</td>
+            </tr>
+          </tbody>
+    </table>
+
+    <p class="texto-neon" style="text-align: center; margin-top: 3%;">TOP 5 - PREGUNTADOS</p>
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+              <th scope="col">Fecha</th>
+              <th scope="col">Puntos</th>
+              <th scope="col">Vidas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let preguntados of arrayPreguntados">
+              <td>{{preguntados.fecha}}</td>
+              <td>{{preguntados.puntos}}</td>
+              <td>{{preguntados.vidasRestantes}}</td>
+            </tr>
+          </tbody>
+    </table>
+</div>
+</div>
+

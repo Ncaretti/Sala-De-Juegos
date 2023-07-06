@@ -1,0 +1,30 @@
+<div *ngIf="pantalla == 'logueado'" style="display: flex; justify-content: center; margin-top: 1%;">
+    <div class="contenedor-juegos">
+        <img class="estilo-foto" src="../../../assets/ahorcado.png" width="250" height="250">
+        <p class="texto-neon" style="text-align: center; margin-top: 20px;">Ahorcado</p>
+        <button routerLink="/ahorcado" class="btn estilo-boton" style="margin-left: 45px; margin-top: 15px;">Jugar</button>
+    </div>
+    <div class="contenedor-juegos">
+        <img class="estilo-foto" src="../../../assets/mayor-menor.png" width="250" height="250">
+        <p class="texto-neon" style="margin-top: 20px; text-align: center;">Mayor o menor</p>
+        <button routerLink="/mayor-menor" class="btn estilo-boton" style="margin-left: 45px;">Jugar</button>
+    </div>
+    <div class="contenedor-juegos">
+        <img class="estilo-foto" src="../../../assets/preguntados.png" width="250" height="250">
+        <p class="texto-neon" style="text-align: center; margin-top: 20px;">Preguntados</p>
+        <button routerLink="/preguntados" class="btn estilo-boton" style="margin-left: 45px; margin-top: 15px;">Jugar</button>
+    </div>
+    <div class="contenedor-juegos">
+        <img class="estilo-foto" src="../../../assets/pong.png" width="250" height="250">
+        <p class="texto-neon" style="text-align: center; margin-top: 20px;">Pong</p>
+        <button routerLink="/pong" class="btn estilo-boton" style="margin-left: 45px; margin-top: 15px;">Jugar</button>
+    </div>
+</div>
+<div *ngIf="pantalla == 'sinUser'">
+    <div class="contenedor-neon" style="text-align: center;">
+        <p class="texto-int-neon">¡ Bienvenido a la sala de juegos de</p>
+        <p class="texto-neon">Nicolas Caretti !</p>
+        <p class="text-inf-neon">TP LABO IV</p>
+        <img src="../../../assets/Y3il.gif" width="150px" height="150px">
+    </div>
+</div>

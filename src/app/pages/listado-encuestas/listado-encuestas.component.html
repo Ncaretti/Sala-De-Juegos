@@ -1,0 +1,30 @@
+<div class="fondo" >
+    <div style="margin-top: 3%; margin-left: 10%; margin-right: 10%;">
+    <p class="texto-neon" style="text-align: center;">LISTA DE ENCUESTAS REALIZADAS</p>
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Edad</th>
+              <th scope="col">Telefono</th>
+              <th scope="col">Nos recomienda</th>
+              <th scope="col">Calificacion</th>
+              <th scope="col">Juego que desea</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let encuesta of arrayEncuestas">
+              <td>{{encuesta.nombre}}</td>
+              <td>{{encuesta.apellido}}</td>
+              <td>{{encuesta.correoUser}}</td>
+              <td>{{encuesta.edad}}</td>
+              <td>{{encuesta.telefono}}</td>
+              <td>{{encuesta.recomendacion}}</td>
+              <td>{{encuesta.calificacion}}</td>
+              <td>{{encuesta.juegoQueDesea}}</td>
+            </tr>
+          </tbody>
+    </table>
+</div>

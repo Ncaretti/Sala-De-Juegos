@@ -1,0 +1,10 @@
+<div class="div-centrado">
+    <form class="form-d">
+        <input [(ngModel)]="email" name="txtCorreo" class="inputs" type="text" placeholder="correo">
+        <br>
+        <input [(ngModel)]="pass" name="txtPass" class="inputs" type="password" placeholder="password">
+        <br>
+        <button class="boton" (click)="login()">Ingresar</button>
+        <button class="boton" style="margin-left: 10px;" (click)="autoCarga()">Acceso rapido</button>
+    </form>          
+</div>

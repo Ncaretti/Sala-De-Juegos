@@ -1,0 +1,61 @@
+<div *ngIf="pantalla =='juego'">
+    <div style="position: absolute;">
+        <div id="puntos" class="contenedor-puntos">
+            <p>PUNTOS: {{puntos}}</p>
+        </div>
+    </div>
+    <div style="position: absolute;">
+        <div id="vidas" class="contenedor-vidas">
+            <p>VIDAS: {{vidas}}</p>
+        </div>
+    </div>
+    <div style="display: grid; justify-content: center;">
+        <div style="margin-top: 5%">
+            <img [src]="this.arrayPreguntas[indice].bandera" width="400px" height="200px" class="estilo-bandera">
+        </div>
+    </div>
+    <div class="contenedor-opciones">
+        <div class="row" style="justify-content:center; margin-top: 3.5%;">
+            <button id="{{this.arrayPreguntas[indice].opciones[0]}}" (click)="opcionSeleccionada(this.arrayPreguntas[indice].opciones[0])" class="col-md-5 btn estilo-boton" style="margin-right: 10px; padding-top: 20px; padding-bottom: 5px;">
+                <p class="opciones">{{this.arrayPreguntas[indice].opciones[0]}}</p>
+            </button>
+            <button id="{{this.arrayPreguntas[indice].opciones[1]}}" (click)="opcionSeleccionada(this.arrayPreguntas[indice].opciones[1])" class="col-md-5 btn estilo-boton" style="padding-top: 20px; padding-bottom: 5px;">
+                <p class="opciones">{{this.arrayPreguntas[indice].opciones[1]}}</p>
+            </button>
+        </div>
+        <div class="row" style="justify-content:center; margin-top: 5%;">
+            <button id="{{this.arrayPreguntas[indice].opciones[2]}}" (click)="opcionSeleccionada(this.arrayPreguntas[indice].opciones[2])" class="col-md-5 btn estilo-boton" style="margin-right: 10px; padding-top: 20px; padding-bottom: 5px;">
+                <p class="opciones">{{this.arrayPreguntas[indice].opciones[2]}}</p>
+            </button>
+            <button id="{{this.arrayPreguntas[indice].opciones[3]}}" (click)="opcionSeleccionada(this.arrayPreguntas[indice].opciones[3])" class="col-md-5 btn estilo-boton" style="padding-top: 20px; padding-bottom: 5px;">
+                <p class="opciones">{{this.arrayPreguntas[indice].opciones[3]}}</p>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="pantalla== 'perdiste'" class="row" style="max-width: 100%;">
+    <div class="fuegos-artificiales col text-center">
+        <img class="" src="../../../assets/35T4.gif" width="250px" height="250px">
+    </div>
+    <div class="text-center" style="margin-top: 3%;">
+        <h1 style="font-size: 4rem; color: white">
+            PERDISTE, TU PUNTUACION FUE: {{puntos}}
+        </h1>
+        <button (click)="ngOnInit()" class="btn btn-warning" style="margin-top: 4%; margin-right: 3%;">Volver a jugar</button>
+        <button routerLink="/home" class="btn btn-warning" style="margin-top: 4%;">Volver al menu</button>
+    </div>
+</div>
+
+<div *ngIf="pantalla == 'termino'" class="row" style="max-width: 100%;">
+    <div class="fuegos-artificiales col text-center">
+        <img class="" src="../../../assets/5SvC.gif" width="250px" height="250px">
+    </div>
+    <div class="text-center" style="margin-top: 3%;">
+        <h1 style="font-size: 4rem; color: white">
+            JUEGO TERMINADO, TU PUNTUACION FUE: {{puntos}}
+        </h1>
+        <button (click)="ngOnInit()" class="btn btn-warning" style="margin-top: 4%; margin-right: 3%;">Volver a jugar</button>
+        <button routerLink="/home" class="btn btn-warning" style="margin-top: 4%;">Volver al menu</button>
+    </div>
+</div>

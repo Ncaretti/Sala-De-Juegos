@@ -1,0 +1,74 @@
+/* .pasar-carta:active{
+    -webkit-animation:slide-right .8s cubic-bezier(.25,.46,.45,.94) both;animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) both
+}
+
+@-webkit-keyframes slide-right{0%{-webkit-transform:translateX(0);transform:translateX(0)}100%{-webkit-transform:translateX(100px);transform:translateX(100px)}}@keyframes slide-right{0%{-webkit-transform:translateX(0);transform:translateX(0)}100%{-webkit-transform:translateX(66.5%);transform:translateX(66.5%)}} */
+
+@keyframes slideInRight {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(145%);
+    }
+}
+
+.moverDerecha{
+    animation-name: slideInRight;
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s; 
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+.fuegos-artificiales{
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100px;
+    text-align: center;
+}
+
+.contenedor-puntos{
+    color: #00ff28;
+    font-weight: bold;
+    letter-spacing:5px;
+    font-size: 1.6rem;
+  
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 12px;
+    filter: drop-shadow(0 0 15px #00ff28) drop-shadow(0 0 50px #00ff28) contrast(2) brightness(2);
+    border: 6px solid #00ff28;
+    border-radius:15px;
+    margin-top: 100px;
+    margin-left: 910px;
+}
+  
+.contenedor-puntos:hover {
+    color: black;
+    background-color: #00ff28;
+    filter: drop-shadow(0 0 20px #00ff28) contrast(2) brightness(2);
+}
+
+.estilo-boton{
+    color: #01c4e7;
+    border: 6px solid #01c4e7;
+    border-radius:15px;
+    padding: 10px 10px;
+    font-size: 20px;
+    font-family: tahoma;
+    letter-spacing:5px;
+    cursor: pointer;
+    font-weight: bold;
+    filter: drop-shadow(0 0 15px #01c4e7) drop-shadow(0 0 50px #01c4e7) contrast(2) brightness(2);
+    transition: .5s;
+}
+  
+.estilo-boton:hover {
+    color: black;
+    background-color: #01c4e7;
+    filter: drop-shadow(0 0 20px #01c4e7) contrast(2) brightness(2);
+}

@@ -1,0 +1,34 @@
+<div class="div-centrado">
+    <form class="form-d" [formGroup]="formRegistro" (submit)="registrar()">
+        <input formControlName="email" name="txtCorreo" class="inputs" type="text" placeholder="Correo">
+            <br>
+            <small class="invalid"
+            *ngIf="formRegistro.controls.email.errors?.required &&
+            formRegistro.controls.email.touched">
+            El correo es requerido.
+            </small>
+            <small class="invalid"
+            *ngIf="formRegistro.controls.email.errors?.email &&
+            formRegistro.controls.email.touched">
+            Correo invalido.
+            </small>
+        <br>
+        <input formControlName="pass" name="txtPass" class="inputs" type="text" placeholder="Contraseña">
+            <br>
+            <small class="invalid"
+            *ngIf="formRegistro.controls.pass.errors?.required &&
+            formRegistro.controls.pass.touched">
+            La contraseña es requerida.
+            </small>
+        <br>
+        <input formControlName="repPass" name="txtRepPass" class="inputs" type="text" placeholder="Repetir contraseña">
+            <br>
+            <small class="invalid"
+            *ngIf="formRegistro.controls.repPass.errors?.required &&
+            formRegistro.controls.repPass.touched">
+            Repita la contraseña.
+            </small>
+        <br>
+        <button class="boton" [disabled]="formRegistro.invalid ">Ingresar</button>
+    </form>          
+</div>

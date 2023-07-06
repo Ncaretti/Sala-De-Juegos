@@ -1,0 +1,19 @@
+.contenedor-neon{
+    border: 6px solid #01c4e7;
+    border-radius:15px;
+    padding: 10px 15px;
+    margin-left: 13%;
+    margin-right: 13%;
+    margin-top: 3%;
+    filter: drop-shadow(0 0 15px #01c4e7) drop-shadow(0 0 15px #01c4e7) contrast(1) brightness(1);
+    transition: .5s;
+}
+
+.contenedor-foto{
+    border: 6px solid #f82d97;
+    border-radius:15px;
+    width: 150px;
+    height: 180px;
+    filter: drop-shadow(0 0 15px #f82d97) drop-shadow(0 0 15px #f82d97) contrast(1) brightness(1);
+    transition: .5s;
+}

@@ -1,0 +1,117 @@
+<div class="contenedor-neon">
+    <form [formGroup]="formEncuesta" (ngSubmit)="subirEncuestaBD()">
+        <div style="padding: 30px;display: flex; justify-content: center;" class="row">
+            <div class="col-md-5">
+                <input type="text" name="txtNombre" formControlName="nombre" placeholder="Nombre" class="form-control">
+                <small class="texto-invalido"
+                *ngIf="formEncuesta.controls.nombre.errors?.required &&
+                formEncuesta.controls.nombre.touched || formEncuesta.get('nombre')!.errors?.minlength
+                || formEncuesta.get('nombre')!.errors?.maxlength">
+                Nombre invalido.
+                </small>
+            </div>
+            <div class="col-md-5">
+                <input type="text" name="txtApellido" formControlName="apellido" placeholder="Apellido" class="form-control">
+                <small class="texto-invalido"
+                *ngIf="formEncuesta.controls.apellido.errors?.required &&
+                formEncuesta.controls.apellido.touched || formEncuesta.get('apellido')!.errors?.minlength
+                || formEncuesta.get('apellido')!.errors?.maxlength">
+                Apellido invalido.
+                </small>
+            </div>
+            <div class="col-md-5" style="margin-top: 3%;">
+                <input type="number" name="txtEdad" formControlName="edad" placeholder="Edad" class="form-control">
+                <small class="texto-invalido"
+                *ngIf="formEncuesta.controls.edad.errors?.required &&
+                formEncuesta.controls.edad.touched || formEncuesta.get('edad')!.errors?.min
+                || formEncuesta.get('edad')!.errors?.max">
+                Edad invalida.
+                </small>
+            </div>
+            <div class="col-md-5" style="margin-top: 3%;">
+                <input type="number" name="txtTelefono" formControlName="telefono" placeholder="Telefono" class="form-control">
+                <small class="texto-invalido"
+                *ngIf="formEncuesta.controls.telefono.errors?.required &&
+                formEncuesta.controls.telefono.touched || formEncuesta.get('telefono')!.errors?.min
+                || formEncuesta.get('telefono')!.errors?.max">
+                Telefono invalido.
+                </small>
+            </div>
+
+            <div class="col-md-3" style="margin-top: 5%;">
+                <label class="texto-neon">Califica la pagina (1-10)</label>
+                <input type="number" ame="txtPuntaje" formControlName="puntaje" placeholder="Puntaje" class="form-control">
+                <small class="texto-invalido"
+                *ngIf="formEncuesta.controls.puntaje.errors?.required &&
+                formEncuesta.controls.puntaje.touched || formEncuesta.get('puntaje')!.errors?.min
+                || formEncuesta.get('puntaje')!.errors?.max">
+                Puntaje invalido.
+                </small>
+            </div>
+            <div class="col-md-3" style="margin-top: 5%;">
+                <label class="texto-neon">Nos recomendarias?</label>
+                <select class="form-select" formControlName="recomendacion">
+                    <option value="" selected disabled>Seleccionar</option>
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select>
+                <small class="texto-invalido"
+                *ngIf="formEncuesta.controls['recomendacion'].errors?.required &&
+                formEncuesta.controls['recomendacion'].touched">
+                Respuesta requerida
+              </small>
+            </div>
+            <div class="col-md-3" style="margin-top: 5%;">
+                <label class="texto-neon">Juego que deseas ver:</label>
+                <div class="form-check">
+                  <input
+                    formControlName="eleccion"
+                    class="form-check-input"
+                    type="radio"
+                    name="eleccion"
+                    id="opcion1"
+                    value="Truco"
+                    checked
+                    required
+                  />
+                  <label class="form-check-label text-check" for="opcion1"> Truco </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    formControlName="eleccion"
+                    class="form-check-input"
+                    type="radio"
+                    name="eleccion"
+                    id="opcion2"
+                    value="Haxball"
+                  />
+                  <label class="form-check-label text-check" for="opcion2"> Haxball </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    formControlName="eleccion"
+                    class="form-check-input"
+                    type="radio"
+                    name="eleccion"
+                    id="opcion3"
+                    value="Ajedrez"
+                  />
+                  <label class="form-check-label text-check" for="opcion3"> Ajedrez </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    formControlName="eleccion"
+                    class="form-check-input"
+                    type="radio"
+                    name="eleccion"
+                    id="opcion4"
+                    value="Snake"
+                  />
+                  <label class="form-check-label text-check" for="opcion4"> Snake </label>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" [disabled]="!this.formEncuesta.valid" class="btn estilo-boton" style="margin-left: 36%;">Subir encuesta</button>
+    </form>
+</div>
